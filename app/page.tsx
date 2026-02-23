@@ -202,11 +202,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Fight Rules Section 
+      {/* Fight Rules Section */}
       <FightRulesSection />
 
-       Judging Criteria Section 
-      <JudgingCriteriaSection />*/}
+      {/* Judging Criteria Section */}
+      <JudgingCriteriaSection />
 
       {/* Sponsors Section */}
       <SponsorSection />
