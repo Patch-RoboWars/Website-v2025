@@ -14,6 +14,7 @@ import { PastCompetitionSection } from "@/components/past-competition-section"
 export default function Home() {
   // Fight Night date - July 5th 2025
   const fightNightDate = new Date("2025-07-05T18:00:00")
+  console.log("[v0] Home page rendering")
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
