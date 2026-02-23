@@ -14,7 +14,7 @@ export function BattleBotAnimation() {
 
         // Dynamically import Three.js with correct paths
         const THREE = await import("three")
-        const { OrbitControls } = await import("three/addons/controls/OrbitControls.js")
+        const { OrbitControls } = await import("three/examples/jsm/controls/OrbitControls.js")
 
         // Scene setup
         const scene = new THREE.Scene()

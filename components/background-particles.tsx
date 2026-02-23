@@ -45,8 +45,8 @@ export function BackgroundParticles() {
 
     function createParticle() {
       const particle: Particle = {
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
+        x: Math.random() * canvas!.width,
+        y: Math.random() * canvas!.height,
         size: Math.random() * 3 + 1,
         speedX: (Math.random() - 0.5) * 1,
         speedY: (Math.random() - 0.5) * 1,
@@ -73,7 +73,7 @@ export function BackgroundParticles() {
         p.opacity = 1 - p.life / p.maxLife
 
         // Remove dead particles and create new ones
-        if (p.life >= p.maxLife || p.x < 0 || p.x > canvas.width || p.y < 0 || p.y > canvas.height) {
+        if (p.life >= p.maxLife || p.x < 0 || p.x > canvas!.width || p.y < 0 || p.y > canvas!.height) {
           particles.splice(i, 1)
           i--
           createParticle()
@@ -82,18 +82,18 @@ export function BackgroundParticles() {
     }
 
     function drawParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx!.clearRect(0, 0, canvas!.width, canvas!.height)
 
       for (const p of particles) {
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fillStyle = p.color
-        ctx.globalAlpha = p.opacity
-        ctx.fill()
+        ctx!.beginPath()
+        ctx!.arc(p.x, p.y, p.size, 0, Math.PI * 2)
+        ctx!.fillStyle = p.color
+        ctx!.globalAlpha = p.opacity
+        ctx!.fill()
 
         // Add glow effect
-        ctx.shadowBlur = 10
-        ctx.shadowColor = p.color
+        ctx!.shadowBlur = 10
+        ctx!.shadowColor = p.color
       }
     }
 
