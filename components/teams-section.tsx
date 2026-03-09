@@ -136,8 +136,14 @@ const teams: Team[] = [
       { name: "Sean Ruane" },
       { name: "Salifya Mtambo" },
     ],
-    mainImage: "",
-    photos: [],
+    mainImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0222-beNXyCHSROEMo4tnqjVoZfYGGoDO8f.jpg",
+    photos: [
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0222-beNXyCHSROEMo4tnqjVoZfYGGoDO8f.jpg", caption: "Team photo with the bot" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9554-x9urmyv1BkI5PBHp9I8MrGOD2vnzKV.jpg", caption: "Soldering electronics" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9527-C84G39CKcixvuf8ZyqDJMnEnAo4GAJ.jpg", caption: "Working on the PCB" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9691-PN8ZHNzY1xucZg5LEGCMdtAtCHcM2q.jpg", caption: "Team discussion" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8844.JPG-6DOdi4Y0P7jrgNeh24uM4jmfU5DxWu.jpeg", caption: "Build workstation" },
+    ],
   },
 ]
 
