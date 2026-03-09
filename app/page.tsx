@@ -1,11 +1,11 @@
 import { BackgroundParticles } from "@/components/background-particles"
 import { SponsorSection } from "@/components/sponsor-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
-import { FightRulesSection } from "@/components/fight-rules-section"
-import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
-import { BuildDaySlideshow } from "@/components/build-day-slideshow"
-import { Info, MapPin, Calendar, Clock, Ticket, ArrowDown } from "lucide-react"
+import { BattlebotHero } from "@/components/battlebot-hero"
+import { TeamsSection } from "@/components/teams-section"
+import { Info, ArrowDown, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -14,45 +14,38 @@ export default function Home() {
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white py-20">
         <BackgroundParticles />
 
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto w-full space-y-12">
-          {/* Main Event Title */}
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500">
-                PATCH ROBOWARS
-              </span>
-            </h1>
-            <div className="space-y-2">
-              <p className="text-orange-400 font-semibold text-xl md:text-2xl tracking-wide">PRESENTS</p>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">FIGHT NIGHT 2025</h2>
-            </div>
-
-            {/* Get Tickets Button */}
-            <div className="pt-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-4 text-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <a
-                  href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3"
-                >
-                  <Ticket className="h-6 w-6" />
-                  Get Free Tickets Now
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* Build Context Slideshow */}
-          <div className="w-full">
-            <div className="bg-black/60 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-6 md:p-8 space-y-6">
-              <div className="w-full max-w-5xl mx-auto">
-                <BuildDaySlideshow />
+        <div className="relative z-10 px-4 max-w-6xl mx-auto w-full">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Left side - Text content */}
+            <div className="text-center lg:text-left space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500">
+                    PATCH
+                  </span>
+                  <br />
+                  <span className="text-white">ROBOWARS</span>
+                </h1>
               </div>
+
+              {/* CTA Button */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-8 py-6 text-lg border-0 shadow-lg hover:shadow-orange-500/25 hover:shadow-xl transition-all duration-300"
+                >
+                  <Link href="/join-committee" className="flex items-center justify-center gap-3">
+                    <Users className="h-5 w-5" />
+                    Join the Committee
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right side - Battlebot */}
+            <div className="relative">
+              <BattlebotHero />
             </div>
           </div>
         </div>
@@ -83,130 +76,74 @@ export default function Home() {
                 disable opponents in a thrilling display of strategy, engineering, and combat.
               </p>
             </div>
-
-            {/* Participant Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
-              <div className="bg-black/40 rounded-xl p-6 flex items-start space-x-4 border border-orange-900/20">
-                <div className="bg-orange-900/30 rounded-full p-3 flex-shrink-0">
-                  <Calendar className="h-6 w-6 text-orange-500" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-lg font-semibold text-white">Weekly Build Sessions</h3>
-                  <p className="text-gray-300">
-                    Regular workshops at Dogpatch Labs with access to tools, 3D printers, and expert guidance.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-black/40 rounded-xl p-6 flex items-start space-x-4 border border-orange-900/20">
-                <div className="bg-orange-900/30 rounded-full p-3 flex-shrink-0">
-                  <Ticket className="h-6 w-6 text-orange-500" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-lg font-semibold text-white">Everything Provided</h3>
-                  <p className="text-gray-300">
-                    Transmitter, receiver, batteries, funding, and workspace - just bring your creativity!
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Event Details Section */}
-      <section id="event-details" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      {/* RoboWars 2025 Teams Section */}
+      <section id="robowars-2025" className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container px-4 md:px-6">
           <div className="space-y-12">
             <div className="flex flex-col items-center text-center space-y-6">
               <div className="inline-block p-2 bg-orange-900/20 rounded-lg">
-                <Calendar className="h-6 w-6 text-orange-500" />
+                <Users className="h-6 w-6 text-orange-500" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Fight Night Details</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">RoboWars 2025</h2>
               <div className="w-20 h-1 bg-orange-600"></div>
+              <p className="text-gray-300 max-w-2xl">Meet the teams competing in this year&apos;s competition</p>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-black/40 rounded-xl p-8 border border-orange-900/20 space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  {/* When */}
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-orange-900/30 rounded-full p-3">
-                        <Calendar className="h-6 w-6 text-orange-500" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">When</h3>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="space-y-2">
-                        <p className="text-orange-400 font-semibold text-lg">Saturday, July 5th, 2025</p>
-                        <div className="space-y-2">
-                          <div className="flex items-center space-x-2">
-                            <Clock className="h-5 w-5 text-orange-500" />
-                            <p className="text-gray-300">
-                              <span className="text-white font-semibold">4:30 PM</span> - Doors open
-                            </p>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <Clock className="h-5 w-5 text-orange-500" />
-                            <p className="text-gray-300">
-                              <span className="text-white font-semibold">5:00 PM</span> - Kick off
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Where */}
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-orange-900/30 rounded-full p-3">
-                        <MapPin className="h-6 w-6 text-orange-500" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">Where</h3>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="space-y-2">
-                        <p className="text-orange-400 font-semibold text-lg">Dogpatch Labs</p>
-                        <p className="text-gray-300">The CHQ Building, Custom House Quay, North Dock, Dublin 1</p>
-                      </div>
-                    </div>
-                  </div>
+            {/* Event Overview from 2024 */}
+            <div className="max-w-5xl mx-auto bg-black/40 rounded-2xl border border-orange-900/30 p-8 space-y-6">
+              <h3 className="text-2xl font-bold text-white text-center">RoboWars 2024</h3>
+              <p className="text-gray-300 text-center max-w-2xl mx-auto">
+                Our inaugural event was an incredible success with fierce battles, amazing builds, and an electric atmosphere.
+              </p>
+              
+              {/* Photo Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700/50 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250705_173051-nY3xGBeyE9LYkn8PX0sCh44YNtlzFH.jpg" 
+                    alt="RoboWars 2024 arena with battlebots and crowd" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
+                  <span className="text-gray-500 text-sm">Crowd Photo</span>
+                </div>
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
+                  <span className="text-gray-500 text-sm">Battle Photo</span>
+                </div>
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
+                  <span className="text-gray-500 text-sm">Winners Photo</span>
                 </div>
               </div>
 
-              {/* Call to Action */}
-              <div className="text-center mt-12 space-y-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-4 text-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <a
-                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3"
-                  >
-                    <Ticket className="h-6 w-6" />
-                    Reserve Your Spot
-                  </a>
-                </Button>
-                <p className="text-gray-400 text-sm">
-                  Limited seating available • Free admission • Registration required
-                </p>
+              {/* Quick Stats */}
+              <div className="grid grid-cols-3 gap-4 pt-4">
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
+                  <p className="text-3xl font-bold text-orange-500">5</p>
+                  <p className="text-gray-400 text-sm">Teams</p>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
+                  <p className="text-3xl font-bold text-orange-500">200+</p>
+                  <p className="text-gray-400 text-sm">Attendees</p>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
+                  <p className="text-3xl font-bold text-orange-500">1</p>
+                  <p className="text-gray-400 text-sm">Epic Night</p>
+                </div>
               </div>
             </div>
+
+            <h3 className="text-2xl font-bold text-white text-center pt-8">This Year&apos;s Competitors</h3>
+
+            <TeamsSection />
           </div>
         </div>
       </section>
-
-      {/* Fight Rules Section */}
-      <FightRulesSection />
-
-      {/* Judging Criteria Section */}
-      <JudgingCriteriaSection />
 
       {/* Sponsors Section */}
       <SponsorSection />

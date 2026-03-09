@@ -29,25 +29,12 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
-            <Link href="/#event-details" className="text-gray-300 hover:text-white transition-colors">
-              Fight Night
+            <Link href="/#robowars-2025" className="text-gray-300 hover:text-white transition-colors">
+              RoboWars 2025
             </Link>
-            <Link href="/#fight-rules" className="text-gray-300 hover:text-white transition-colors">
-              Fight Rules
+            <Link href="/join-committee" className="text-gray-300 hover:text-white transition-colors">
+              Join the Committee
             </Link>
-            <Button
-              asChild
-              variant="default"
-              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[140px]"
-            >
-              <a
-                href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Tickets
-              </a>
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -65,33 +52,19 @@ export function Navbar() {
               About
             </Link>
             <Link
-              href="/#event-details"
+              href="/#robowars-2025"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
-              Fight Night
+              RoboWars 2025
             </Link>
             <Link
-              href="/#fight-rules"
+              href="/join-committee"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
-              Fight Rules
+              Join the Committee
             </Link>
-            <Button
-              asChild
-              variant="default"
-              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white w-full"
-            >
-              <a
-                href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={toggleMenu}
-              >
-                Get Tickets
-              </a>
-            </Button>
           </div>
         </div>
       )}
