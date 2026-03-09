@@ -86,8 +86,16 @@ const teams: Team[] = [
       { name: "Juno Keaney Lonergan" },
       { name: "Keith Egan" },
     ],
-    mainImage: "",
-    photos: [],
+    mainImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0034-skG9o5uElZaPkOnXyrB3t30m7ZPHE1.jpg",
+    photos: [
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0034-skG9o5uElZaPkOnXyrB3t30m7ZPHE1.jpg", caption: "Duck-heed Martin with controller" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9947-j2bJC2NviYhnrn6z2dKjYhlhOETvMm.jpg", caption: "Battle against K9 Unit" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9904-8UUfR6XS85Xoo2ooTWsA9UP5gGzJA4.jpg", caption: "The ducks in the arena" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9817-0WRPEf91iUVckfwoDHlUtWJLya6LlY.jpg", caption: "Adding rubber ducks to the bot" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0038-dtYGRSnC9OhQvnFF1ox0wnmlL2NKf1.jpg", caption: "Retrieving the bot from arena" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9522-hwyZDQ4hClarjg7zUmiwqKku8hCr5n.jpg", caption: "Team repairing the bot" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0194-zbNlaRINpTk8SA0YNn6iOXRLSsorXw.jpg", caption: "Group photo with all teams" },
+    ],
   },
   {
     id: 4,
