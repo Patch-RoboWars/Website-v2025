@@ -29,11 +29,8 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
-{/* <Link href="/#event-details" className="text-gray-300 hover:text-white transition-colors">
-              Fight Night
-            </Link> */}
-            <Link href="/#fight-rules" className="text-gray-300 hover:text-white transition-colors">
-              Fight Rules
+            <Link href="/#robowars-2025" className="text-gray-300 hover:text-white transition-colors">
+              RoboWars 2025
             </Link>
             <Link href="/join-committee" className="text-gray-300 hover:text-white transition-colors">
               Join Committee
@@ -54,19 +51,12 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors py-2" onClick={toggleMenu}>
               About
             </Link>
-            {/* <Link
-              href="/#event-details"
-              className="text-gray-300 hover:text-white transition-colors py-2"
-              onClick={toggleMenu}
-            >
-              Fight Night
-            </Link> */}
             <Link
-              href="/#fight-rules"
+              href="/#robowars-2025"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
-              Fight Rules
+              RoboWars 2025
             </Link>
             <Link
               href="/join-committee"

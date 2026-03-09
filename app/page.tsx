@@ -1,11 +1,8 @@
 import { BackgroundParticles } from "@/components/background-particles"
 import { SponsorSection } from "@/components/sponsor-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
-import { FightRulesSection } from "@/components/fight-rules-section"
-import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
-import { BuildDaySlideshow } from "@/components/build-day-slideshow"
 import { BattlebotHero } from "@/components/battlebot-hero"
-import { Info, MapPin, Calendar, Clock, ArrowDown, Users, Wrench } from "lucide-react"
+import { Info, Calendar, ArrowDown, Users, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -109,80 +106,93 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Event Details Section */}
-      <section id="event-details" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      {/* RoboWars 2025 Teams Section */}
+      <section id="robowars-2025" className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container px-4 md:px-6">
           <div className="space-y-12">
             <div className="flex flex-col items-center text-center space-y-6">
               <div className="inline-block p-2 bg-orange-900/20 rounded-lg">
-                <Calendar className="h-6 w-6 text-orange-500" />
+                <Users className="h-6 w-6 text-orange-500" />
               </div>
-              {/* <h2 className="text-3xl md:text-4xl font-bold text-white">Fight Night Details</h2> */}
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Event Details</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">RoboWars 2025</h2>
               <div className="w-20 h-1 bg-orange-600"></div>
+              <p className="text-gray-300 max-w-2xl">Meet the teams competing in this year&apos;s competition</p>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-black/40 rounded-xl p-8 border border-orange-900/20 space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  {/* When */}
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-orange-900/30 rounded-full p-3">
-                        <Calendar className="h-6 w-6 text-orange-500" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">When</h3>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="space-y-2">
-                        <p className="text-orange-400 font-semibold text-lg">Saturday, July 5th, 2025</p>
-                        <div className="space-y-2">
-                          <div className="flex items-center space-x-2">
-                            <Clock className="h-5 w-5 text-orange-500" />
-                            <p className="text-gray-300">
-                              <span className="text-white font-semibold">4:30 PM</span> - Doors open
-                            </p>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <Clock className="h-5 w-5 text-orange-500" />
-                            <p className="text-gray-300">
-                              <span className="text-white font-semibold">5:00 PM</span> - Kick off
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Where */}
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-orange-900/30 rounded-full p-3">
-                        <MapPin className="h-6 w-6 text-orange-500" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">Where</h3>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="space-y-2">
-                        <p className="text-orange-400 font-semibold text-lg">Dogpatch Labs</p>
-                        <p className="text-gray-300">The CHQ Building, Custom House Quay, North Dock, Dublin 1</p>
-                      </div>
-                    </div>
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto">
+              {/* Team 1 */}
+              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">1</div>
+                </div>
+                <div className="p-4 space-y-3">
+                  <h3 className="font-bold text-white text-lg">Team Alpha</h3>
+                  <p className="text-gray-400 text-sm line-clamp-2">Coming soon...</p>
+                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
+                    Preview
+                  </Button>
                 </div>
               </div>
 
-              
+              {/* Team 2 */}
+              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">2</div>
+                </div>
+                <div className="p-4 space-y-3">
+                  <h3 className="font-bold text-white text-lg">Team Beta</h3>
+                  <p className="text-gray-400 text-sm line-clamp-2">Coming soon...</p>
+                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
+                    Preview
+                  </Button>
+                </div>
+              </div>
+
+              {/* Team 3 */}
+              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">3</div>
+                </div>
+                <div className="p-4 space-y-3">
+                  <h3 className="font-bold text-white text-lg">Team Gamma</h3>
+                  <p className="text-gray-400 text-sm line-clamp-2">Coming soon...</p>
+                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
+                    Preview
+                  </Button>
+                </div>
+              </div>
+
+              {/* Team 4 */}
+              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">4</div>
+                </div>
+                <div className="p-4 space-y-3">
+                  <h3 className="font-bold text-white text-lg">Team Delta</h3>
+                  <p className="text-gray-400 text-sm line-clamp-2">Coming soon...</p>
+                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
+                    Preview
+                  </Button>
+                </div>
+              </div>
+
+              {/* Team 5 */}
+              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">5</div>
+                </div>
+                <div className="p-4 space-y-3">
+                  <h3 className="font-bold text-white text-lg">Team Epsilon</h3>
+                  <p className="text-gray-400 text-sm line-clamp-2">Coming soon...</p>
+                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
+                    Preview
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Fight Rules Section */}
-      <FightRulesSection />
-
-      {/* Judging Criteria Section */}
-      <JudgingCriteriaSection />
 
       {/* Sponsors Section */}
       <SponsorSection />
