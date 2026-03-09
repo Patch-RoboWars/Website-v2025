@@ -17,13 +17,10 @@ export default function Home() {
         <BackgroundParticles />
 
         <div className="relative z-10 px-4 max-w-6xl mx-auto w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left side - Text content */}
             <div className="text-center lg:text-left space-y-8">
-              <div className="space-y-4">
-                <p className="text-orange-400 font-semibold text-lg md:text-xl tracking-widest uppercase">
-                  Dublin&apos;s Premier Battlebot Competition
-                </p>
+              <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500">
                     PATCH
@@ -31,9 +28,6 @@ export default function Home() {
                   <br />
                   <span className="text-white">ROBOWARS</span>
                 </h1>
-                <p className="text-gray-300 text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
-                  Build. Battle. Dominate. Join the most exciting student-run robot combat competition in Ireland.
-                </p>
               </div>
 
               {/* CTA Button */}
@@ -48,22 +42,6 @@ export default function Home() {
                     Join the Committee
                   </Link>
                 </Button>
-              </div>
-
-              {/* Stats */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-8 pt-4">
-                <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-orange-500">20+</p>
-                  <p className="text-gray-400 text-sm">Teams</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-orange-500">1</p>
-                  <p className="text-gray-400 text-sm">Epic Battle</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-orange-500">Free</p>
-                  <p className="text-gray-400 text-sm">Entry</p>
-                </div>
               </div>
             </div>
 
