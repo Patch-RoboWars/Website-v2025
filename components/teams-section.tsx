@@ -63,7 +63,12 @@ const teams: Team[] = [
     weapon: "Pneumatic flipper weapon running at 120 PSI",
     armor: "Reinforced steel chassis with low profile design",
     specialFeature: "Quick-refill pneumatic system for multiple flips per match",
-    members: [],
+    members: [
+      { name: "Joe Biju" },
+      { name: "Ray Foysal" },
+      { name: "Ugochukwu Uzoukwu" },
+      { name: "Alan Jose" },
+    ],
     mainImage: "",
     photos: [],
   },
