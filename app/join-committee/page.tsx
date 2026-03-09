@@ -42,14 +42,14 @@ export default function JoinCommitteePage() {
       <section className="relative flex-1 pb-20">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-black/40 rounded-xl border border-orange-900/20 overflow-hidden p-6">
+            <div className="bg-zinc-900/80 backdrop-blur-sm rounded-2xl border border-orange-500/20 overflow-hidden shadow-2xl shadow-orange-500/5">
               <iframe
-                data-tally-src="https://tally.so/embed/obAMO1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                data-tally-src="https://tally.so/embed/obAMO1?hideTitle=1&dynamicHeight=1"
                 loading="lazy"
                 width="100%"
-                height="600"
+                height="700"
                 title="Join the Committee Form"
-                className="w-full min-h-[600px] border-0"
+                className="w-full min-h-[700px] border-0"
               ></iframe>
             </div>
           </div>
