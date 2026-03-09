@@ -1,20 +1,7 @@
-"use client"
-
 import { BackgroundParticles } from "@/components/background-particles"
 import { Users } from "lucide-react"
-import Script from "next/script"
-import { useEffect } from "react"
 
 export default function JoinCommitteePage() {
-  useEffect(() => {
-    // Load Tally embeds when the script is ready
-    const loadTally = () => {
-      if (typeof window !== "undefined" && (window as unknown as { Tally?: { loadEmbeds: () => void } }).Tally) {
-        (window as unknown as { Tally: { loadEmbeds: () => void } }).Tally.loadEmbeds()
-      }
-    }
-    loadTally()
-  }, [])
   return (
     <div className="flex flex-col min-h-screen bg-black">
       <BackgroundParticles />
@@ -54,10 +41,7 @@ export default function JoinCommitteePage() {
         </div>
       </section>
 
-      <Script
-        src="https://tally.so/widgets/embed.js"
-        strategy="lazyOnload"
-      />
+      <script src="https://tally.so/widgets/embed.js" async />
     </div>
   )
 }
