@@ -18,169 +18,154 @@ export function BattlebotHero() {
       {/* Arena floor reflection */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-gradient-to-t from-orange-500/10 to-transparent blur-xl rounded-full" />
       
-      {/* Main battlebot SVG - 4WD wedge with vertical spinner */}
+      {/* Main battlebot SVG - Horizontal bar spinner like Da Vinci's Fury */}
       <svg
         viewBox="0 0 400 320"
         className="w-full h-full relative z-10"
         xmlns="http://www.w3.org/2000/svg"
       >
         {/* Shadow under the bot */}
-        <ellipse cx="200" cy="290" rx="140" ry="20" fill="rgba(0,0,0,0.4)" />
+        <ellipse cx="200" cy="280" rx="130" ry="18" fill="rgba(0,0,0,0.5)" />
         
-        {/* === WHEELS - 4 wheel drive setup === */}
+        {/* === MAIN CHASSIS - Low profile wedge === */}
         
-        {/* Front Left Wheel */}
-        <g>
-          <rect x="55" y="220" width="25" height="45" rx="5" fill="#111" stroke="#222" strokeWidth="2" />
-          <rect x="60" y="225" width="15" height="35" rx="3" fill="#0a0a0a" />
-          {/* Treads */}
-          <line x1="58" y1="230" x2="77" y2="230" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="58" y1="240" x2="77" y2="240" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="58" y1="250" x2="77" y2="250" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="58" y1="260" x2="77" y2="260" stroke="#1a1a1a" strokeWidth="3" />
-          {/* Hub */}
-          <circle cx="67" cy="242" r="6" fill="#f97316" />
-        </g>
-        
-        {/* Front Right Wheel */}
-        <g>
-          <rect x="320" y="220" width="25" height="45" rx="5" fill="#111" stroke="#222" strokeWidth="2" />
-          <rect x="325" y="225" width="15" height="35" rx="3" fill="#0a0a0a" />
-          {/* Treads */}
-          <line x1="323" y1="230" x2="342" y2="230" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="323" y1="240" x2="342" y2="240" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="323" y1="250" x2="342" y2="250" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="323" y1="260" x2="342" y2="260" stroke="#1a1a1a" strokeWidth="3" />
-          {/* Hub */}
-          <circle cx="333" cy="242" r="6" fill="#f97316" />
-        </g>
-        
-        {/* Back Left Wheel */}
-        <g>
-          <rect x="75" y="235" width="25" height="45" rx="5" fill="#111" stroke="#222" strokeWidth="2" />
-          <rect x="80" y="240" width="15" height="35" rx="3" fill="#0a0a0a" />
-          {/* Treads */}
-          <line x1="78" y1="245" x2="97" y2="245" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="78" y1="255" x2="97" y2="255" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="78" y1="265" x2="97" y2="265" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="78" y1="275" x2="97" y2="275" stroke="#1a1a1a" strokeWidth="3" />
-          {/* Hub */}
-          <circle cx="87" cy="257" r="6" fill="#f97316" />
-        </g>
-        
-        {/* Back Right Wheel */}
-        <g>
-          <rect x="300" y="235" width="25" height="45" rx="5" fill="#111" stroke="#222" strokeWidth="2" />
-          <rect x="305" y="240" width="15" height="35" rx="3" fill="#0a0a0a" />
-          {/* Treads */}
-          <line x1="303" y1="245" x2="322" y2="245" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="303" y1="255" x2="322" y2="255" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="303" y1="265" x2="322" y2="265" stroke="#1a1a1a" strokeWidth="3" />
-          <line x1="303" y1="275" x2="322" y2="275" stroke="#1a1a1a" strokeWidth="3" />
-          {/* Hub */}
-          <circle cx="313" cy="257" r="6" fill="#f97316" />
-        </g>
-        
-        {/* === MAIN CHASSIS === */}
-        
-        {/* Bottom plate / base */}
-        <rect x="95" y="250" width="210" height="30" rx="3" fill="#1a1a1a" stroke="#2a2a2a" strokeWidth="2" />
-        
-        {/* Front wedge scoop */}
+        {/* Base plate - angled wedge shape */}
         <path
-          d="M95 250 L50 270 L50 280 L95 280 Z"
-          fill="#222"
-          stroke="#333"
-          strokeWidth="2"
-        />
-        <path
-          d="M305 250 L350 270 L350 280 L305 280 Z"
-          fill="#222"
-          stroke="#333"
+          d="M60 250 L340 250 L330 270 L70 270 Z"
+          fill="#2a2a2a"
+          stroke="#3a3a3a"
           strokeWidth="2"
         />
         
-        {/* Main body box */}
-        <rect x="110" y="200" width="180" height="55" rx="4" fill="#1f1f1f" stroke="#333" strokeWidth="2" />
+        {/* Main body - low rectangular chassis */}
+        <path
+          d="M80 220 L320 220 L340 250 L60 250 Z"
+          fill="url(#chassisGradient)"
+          stroke="#555"
+          strokeWidth="2"
+        />
         
-        {/* Top armor plate - brushed metal look */}
-        <rect x="115" y="195" width="170" height="12" rx="2" fill="url(#metalGradient)" stroke="#555" strokeWidth="1" />
+        {/* Top plate with vents */}
+        <rect x="90" y="210" width="220" height="15" rx="2" fill="url(#metalGradient)" stroke="#666" strokeWidth="1" />
+        
+        {/* Vent slots */}
+        <rect x="110" y="213" width="30" height="8" rx="1" fill="#222" />
+        <rect x="150" y="213" width="30" height="8" rx="1" fill="#222" />
+        <rect x="220" y="213" width="30" height="8" rx="1" fill="#222" />
+        <rect x="260" y="213" width="30" height="8" rx="1" fill="#222" />
         
         {/* Side armor panels */}
-        <rect x="100" y="210" width="10" height="40" rx="2" fill="#2a2a2a" stroke="#3a3a3a" strokeWidth="1" />
-        <rect x="290" y="210" width="10" height="40" rx="2" fill="#2a2a2a" stroke="#3a3a3a" strokeWidth="1" />
+        <path d="M80 220 L60 250 L60 260 L75 260 L85 225 Z" fill="#333" stroke="#444" strokeWidth="1" />
+        <path d="M320 220 L340 250 L340 260 L325 260 L315 225 Z" fill="#333" stroke="#444" strokeWidth="1" />
         
-        {/* Mounting bolts */}
-        <circle cx="130" cy="200" r="4" fill="#444" stroke="#555" strokeWidth="1" />
-        <circle cx="200" cy="200" r="4" fill="#444" stroke="#555" strokeWidth="1" />
-        <circle cx="270" cy="200" r="4" fill="#444" stroke="#555" strokeWidth="1" />
+        {/* Front wedge scoop - angled armor */}
+        <path
+          d="M60 250 L30 265 L60 270 Z"
+          fill="#3a3a3a"
+          stroke="#4a4a4a"
+          strokeWidth="2"
+        />
+        <path
+          d="M340 250 L370 265 L340 270 Z"
+          fill="#3a3a3a"
+          stroke="#4a4a4a"
+          strokeWidth="2"
+        />
         
-        {/* === SPINNER MOTOR HOUSING (inside chassis) === */}
-        <rect x="175" y="205" width="50" height="45" rx="4" fill="#0f0f0f" stroke="#222" strokeWidth="2" />
-        <rect x="180" y="210" width="40" height="35" rx="2" fill="#1a1a1a" />
-        {/* Motor vents */}
-        <line x1="185" y1="218" x2="215" y2="218" stroke="#333" strokeWidth="2" />
-        <line x1="185" y1="226" x2="215" y2="226" stroke="#333" strokeWidth="2" />
-        <line x1="185" y1="234" x2="215" y2="234" stroke="#333" strokeWidth="2" />
+        {/* === WHEELS - Small side-mounted wheels === */}
         
-        {/* Bearing mount on top of chassis */}
-        <ellipse cx="200" cy="195" rx="22" ry="8" fill="#2a2a2a" stroke="#444" strokeWidth="2" />
-        <ellipse cx="200" cy="195" rx="14" ry="5" fill="#1a1a1a" stroke="#333" strokeWidth="1" />
+        {/* Left front wheel */}
+        <ellipse cx="85" cy="258" rx="12" ry="8" fill="#111" stroke="#222" strokeWidth="2" />
+        <ellipse cx="85" cy="258" rx="6" ry="4" fill="#f97316" />
         
-        {/* Shaft coming out of bearing */}
-        <rect x="196" y="160" width="8" height="38" fill="#555" stroke="#666" strokeWidth="1" />
+        {/* Left rear wheel */}
+        <ellipse cx="115" cy="262" rx="12" ry="8" fill="#111" stroke="#222" strokeWidth="2" />
+        <ellipse cx="115" cy="262" rx="6" ry="4" fill="#f97316" />
         
-        {/* === VERTICAL DRUM SPINNER - mounted on shaft === */}
+        {/* Right front wheel */}
+        <ellipse cx="315" cy="258" rx="12" ry="8" fill="#111" stroke="#222" strokeWidth="2" />
+        <ellipse cx="315" cy="258" rx="6" ry="4" fill="#f97316" />
+        
+        {/* Right rear wheel */}
+        <ellipse cx="285" cy="262" rx="12" ry="8" fill="#111" stroke="#222" strokeWidth="2" />
+        <ellipse cx="285" cy="262" rx="6" ry="4" fill="#f97316" />
+        
+        {/* === SPINNER MOTOR MOUNT - Center of chassis === */}
+        
+        {/* Motor housing */}
+        <rect x="175" y="215" width="50" height="30" rx="3" fill="#1a1a1a" stroke="#333" strokeWidth="2" />
+        
+        {/* Bearing mount */}
+        <ellipse cx="200" cy="210" rx="20" ry="6" fill="#2a2a2a" stroke="#444" strokeWidth="2" />
+        <ellipse cx="200" cy="210" rx="12" ry="4" fill="#1a1a1a" />
+        
+        {/* Shaft */}
+        <rect x="196" y="195" width="8" height="18" fill="#555" stroke="#666" strokeWidth="1" />
+        
+        {/* === HORIZONTAL BAR SPINNER === */}
         <motion.g
           animate={{ rotate: 360 }}
           transition={{
-            duration: isHovered ? 0.1 : 2,
+            duration: isHovered ? 0.08 : 3,
             repeat: Infinity,
             ease: "linear"
           }}
-          style={{ transformOrigin: "200px 140px" }}
+          style={{ transformOrigin: "200px 190px" }}
         >
-          {/* Drum body - horizontal cylinder */}
-          <ellipse cx="200" cy="140" rx="45" ry="22" fill="url(#drumGradient)" stroke="#b45309" strokeWidth="3" />
+          {/* Main spinning bar */}
+          <rect x="50" y="182" width="300" height="16" rx="2" fill="url(#barGradient)" stroke="#666" strokeWidth="2" />
           
-          {/* Drum teeth/impactors - 4 around the drum */}
-          <rect x="150" y="133" width="12" height="14" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
-          <rect x="238" y="133" width="12" height="14" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
-          <rect x="193" y="112" width="14" height="10" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
-          <rect x="193" y="158" width="14" height="10" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
+          {/* Bar reinforcement plates */}
+          <rect x="60" y="185" width="40" height="10" rx="1" fill="#4a4a4a" stroke="#555" strokeWidth="1" />
+          <rect x="300" y="185" width="40" height="10" rx="1" fill="#4a4a4a" stroke="#555" strokeWidth="1" />
           
-          {/* Center hub cap */}
-          <circle cx="200" cy="140" r="10" fill="#333" stroke="#444" strokeWidth="2" />
-          <circle cx="200" cy="140" r="5" fill="#222" />
+          {/* Impact teeth on ends */}
+          <polygon points="50,185 35,190 50,195" fill="#7f8c8d" stroke="#666" strokeWidth="1" />
+          <polygon points="350,185 365,190 350,195" fill="#7f8c8d" stroke="#666" strokeWidth="1" />
+          
+          {/* Center hub */}
+          <circle cx="200" cy="190" r="15" fill="#333" stroke="#444" strokeWidth="2" />
+          <circle cx="200" cy="190" r="8" fill="#222" stroke="#333" strokeWidth="1" />
+          
+          {/* Mounting bolts on bar */}
+          <circle cx="100" cy="190" r="3" fill="#555" />
+          <circle cx="150" cy="190" r="3" fill="#555" />
+          <circle cx="250" cy="190" r="3" fill="#555" />
+          <circle cx="300" cy="190" r="3" fill="#555" />
         </motion.g>
         
         {/* === ELECTRONICS === */}
         
         {/* Power LED */}
-        <circle cx="140" cy="230" r="4" fill="#22c55e" className="animate-pulse" />
+        <circle cx="140" cy="235" r="3" fill="#22c55e" className="animate-pulse" />
         
         {/* Receiver antenna */}
-        <line x1="260" y1="210" x2="275" y2="175" stroke="#555" strokeWidth="2" />
-        <circle cx="275" cy="172" r="4" fill="#f97316" className="animate-pulse" />
+        <line x1="260" y1="220" x2="280" y2="180" stroke="#555" strokeWidth="2" />
+        <circle cx="280" cy="177" r="3" fill="#f97316" className="animate-pulse" />
         
-        {/* Link indicator LED */}
-        <circle cx="260" cy="230" r="3" fill="#3b82f6" className="animate-pulse" />
+        {/* Link LED */}
+        <circle cx="260" cy="235" r="2" fill="#3b82f6" className="animate-pulse" />
         
         {/* Gradients */}
         <defs>
           <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#6b7280" />
-            <stop offset="25%" stopColor="#9ca3af" />
-            <stop offset="50%" stopColor="#d1d5db" />
-            <stop offset="75%" stopColor="#9ca3af" />
-            <stop offset="100%" stopColor="#6b7280" />
+            <stop offset="0%" stopColor="#5a5a5a" />
+            <stop offset="25%" stopColor="#8a8a8a" />
+            <stop offset="50%" stopColor="#aaa" />
+            <stop offset="75%" stopColor="#8a8a8a" />
+            <stop offset="100%" stopColor="#5a5a5a" />
           </linearGradient>
-          <linearGradient id="drumGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#c2410c" />
-            <stop offset="30%" stopColor="#f97316" />
-            <stop offset="50%" stopColor="#fbbf24" />
-            <stop offset="70%" stopColor="#f97316" />
-            <stop offset="100%" stopColor="#c2410c" />
+          <linearGradient id="chassisGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#4a4a4a" />
+            <stop offset="50%" stopColor="#3a3a3a" />
+            <stop offset="100%" stopColor="#2a2a2a" />
+          </linearGradient>
+          <linearGradient id="barGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#6b7280" />
+            <stop offset="20%" stopColor="#9ca3af" />
+            <stop offset="50%" stopColor="#d1d5db" />
+            <stop offset="80%" stopColor="#9ca3af" />
+            <stop offset="100%" stopColor="#6b7280" />
           </linearGradient>
         </defs>
       </svg>
@@ -189,44 +174,44 @@ export function BattlebotHero() {
       {isHovered && (
         <>
           <motion.div
-            className="absolute top-1/3 left-1/3 w-1 h-1 bg-yellow-300 rounded-full"
+            className="absolute top-[45%] left-[10%] w-2 h-2 bg-yellow-300 rounded-full"
             animate={{
               opacity: [0, 1, 1, 0],
               scale: [0, 1, 1.5, 0],
-              x: [0, -30, -60],
-              y: [0, -20, -10],
+              x: [0, -20, -50],
+              y: [0, -30, -20],
             }}
             transition={{
-              duration: 0.3,
+              duration: 0.25,
+              repeat: Infinity,
+              repeatDelay: 0.15,
+            }}
+          />
+          <motion.div
+            className="absolute top-[45%] right-[10%] w-2 h-2 bg-orange-300 rounded-full"
+            animate={{
+              opacity: [0, 1, 1, 0],
+              scale: [0, 1, 1.5, 0],
+              x: [0, 20, 50],
+              y: [0, -25, -15],
+            }}
+            transition={{
+              duration: 0.2,
               repeat: Infinity,
               repeatDelay: 0.2,
             }}
           />
           <motion.div
-            className="absolute top-1/3 right-1/3 w-1 h-1 bg-orange-300 rounded-full"
-            animate={{
-              opacity: [0, 1, 1, 0],
-              scale: [0, 1, 1.5, 0],
-              x: [0, 30, 60],
-              y: [0, -15, 5],
-            }}
-            transition={{
-              duration: 0.25,
-              repeat: Infinity,
-              repeatDelay: 0.3,
-            }}
-          />
-          <motion.div
-            className="absolute top-1/4 left-1/2 w-1.5 h-1.5 bg-yellow-400 rounded-full"
+            className="absolute top-[40%] left-[50%] w-1.5 h-1.5 bg-yellow-400 rounded-full"
             animate={{
               opacity: [0, 1, 0],
               scale: [0, 2, 0],
-              y: [0, -40],
+              y: [0, -50],
             }}
             transition={{
-              duration: 0.2,
+              duration: 0.15,
               repeat: Infinity,
-              repeatDelay: 0.4,
+              repeatDelay: 0.3,
             }}
           />
         </>

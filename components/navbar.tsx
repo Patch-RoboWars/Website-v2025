@@ -33,7 +33,7 @@ export function Navbar() {
               RoboWars 2025
             </Link>
             <Link href="/join-committee" className="text-gray-300 hover:text-white transition-colors">
-              Join Committee
+              Join the Committee
             </Link>
           </nav>
 
@@ -63,7 +63,7 @@ export function Navbar() {
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
-              Join Committee
+              Join the Committee
             </Link>
           </div>
         </div>

@@ -92,6 +92,52 @@ export default function Home() {
               <p className="text-gray-300 max-w-2xl">Meet the teams competing in this year&apos;s competition</p>
             </div>
 
+            {/* Event Overview from Last Year */}
+            <div className="max-w-5xl mx-auto bg-black/40 rounded-2xl border border-orange-900/30 p-8 space-y-6">
+              <h3 className="text-2xl font-bold text-white text-center">Last Year&apos;s Event</h3>
+              <p className="text-gray-300 text-center max-w-2xl mx-auto">
+                RoboWars 2024 was an incredible success with fierce battles, amazing builds, and an electric atmosphere.
+              </p>
+              
+              {/* Photo Grid Placeholder */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
+                  <span className="text-gray-500 text-sm">Arena Photo</span>
+                </div>
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
+                  <span className="text-gray-500 text-sm">Crowd Photo</span>
+                </div>
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
+                  <span className="text-gray-500 text-sm">Battle Photo</span>
+                </div>
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
+                  <span className="text-gray-500 text-sm">Winners Photo</span>
+                </div>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
+                  <p className="text-3xl font-bold text-orange-500">5</p>
+                  <p className="text-gray-400 text-sm">Teams</p>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
+                  <p className="text-3xl font-bold text-orange-500">10+</p>
+                  <p className="text-gray-400 text-sm">Battles</p>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
+                  <p className="text-3xl font-bold text-orange-500">100+</p>
+                  <p className="text-gray-400 text-sm">Attendees</p>
+                </div>
+                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
+                  <p className="text-3xl font-bold text-orange-500">1</p>
+                  <p className="text-gray-400 text-sm">Epic Night</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-white text-center pt-8">This Year&apos;s Competitors</h3>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto">
               {/* Team 1: The K9 Unit */}
               <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
