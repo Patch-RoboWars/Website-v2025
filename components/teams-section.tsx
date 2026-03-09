@@ -69,8 +69,14 @@ const teams: Team[] = [
       { name: "Ugochukwu Uzoukwu" },
       { name: "Alan Jose" },
     ],
-    mainImage: "",
-    photos: [],
+    mainImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0157-ai6F7YKazg8VQBZRIJdtC9TNrItwyj.jpg",
+    photos: [
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0157-ai6F7YKazg8VQBZRIJdtC9TNrItwyj.jpg", caption: "Team photo with the flipper bot" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0083-QgwzpkJHUlaABTkB7XA44j2KcnLzCd.jpg", caption: "Flipper bot in the arena" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0081-VCAb5SoaqifgwcJkJNOCy9rgiZ9EZ2.jpg", caption: "Bot ready for battle" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9237.JPG-YAn4Xzs9AgJDAFLkQ5fOvY9AjtQErI.jpeg", caption: "Final assembly on the turf" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8824.JPG-CMCVhFgOSEdPV410MmQDfu3TbVB0Iq.jpeg", caption: "Build session with the team" },
+    ],
   },
   {
     id: 3,
@@ -86,8 +92,16 @@ const teams: Team[] = [
       { name: "Juno Keaney Lonergan" },
       { name: "Keith Egan" },
     ],
-    mainImage: "",
-    photos: [],
+    mainImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0034-skG9o5uElZaPkOnXyrB3t30m7ZPHE1.jpg",
+    photos: [
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0034-skG9o5uElZaPkOnXyrB3t30m7ZPHE1.jpg", caption: "Duck-heed Martin with controller" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9947-j2bJC2NviYhnrn6z2dKjYhlhOETvMm.jpg", caption: "Battle against K9 Unit" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9904-8UUfR6XS85Xoo2ooTWsA9UP5gGzJA4.jpg", caption: "The ducks in the arena" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9817-0WRPEf91iUVckfwoDHlUtWJLya6LlY.jpg", caption: "Adding rubber ducks to the bot" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0038-dtYGRSnC9OhQvnFF1ox0wnmlL2NKf1.jpg", caption: "Retrieving the bot from arena" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9522-hwyZDQ4hClarjg7zUmiwqKku8hCr5n.jpg", caption: "Team repairing the bot" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0194-zbNlaRINpTk8SA0YNn6iOXRLSsorXw.jpg", caption: "Group photo with all teams" },
+    ],
   },
   {
     id: 4,
@@ -128,8 +142,14 @@ const teams: Team[] = [
       { name: "Sean Ruane" },
       { name: "Salifya Mtambo" },
     ],
-    mainImage: "",
-    photos: [],
+    mainImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0222-beNXyCHSROEMo4tnqjVoZfYGGoDO8f.jpg",
+    photos: [
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0222-beNXyCHSROEMo4tnqjVoZfYGGoDO8f.jpg", caption: "Team photo with the bot" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9554-x9urmyv1BkI5PBHp9I8MrGOD2vnzKV.jpg", caption: "Soldering electronics" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9527-C84G39CKcixvuf8ZyqDJMnEnAo4GAJ.jpg", caption: "Working on the PCB" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9691-PN8ZHNzY1xucZg5LEGCMdtAtCHcM2q.jpg", caption: "Team discussion" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8844.JPG-6DOdi4Y0P7jrgNeh24uM4jmfU5DxWu.jpeg", caption: "Build workstation" },
+    ],
   },
 ]
 
