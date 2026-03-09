@@ -100,10 +100,15 @@ export default function Home() {
                 Our inaugural event was an incredible success with fierce battles, amazing builds, and an electric atmosphere.
               </p>
               
-              {/* Photo Grid Placeholder */}
+              {/* Photo Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
-                  <span className="text-gray-500 text-sm">Arena Photo</span>
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700/50 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250705_173051-nY3xGBeyE9LYkn8PX0sCh44YNtlzFH.jpg" 
+                    alt="RoboWars 2024 arena with battlebots and crowd" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
                   <span className="text-gray-500 text-sm">Crowd Photo</span>
