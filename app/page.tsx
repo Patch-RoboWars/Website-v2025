@@ -143,14 +143,15 @@ export default function Home() {
               <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
                 <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
                   <img 
-                    src="/images/teams/k9-unit.jpg" 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9136.JPG-HAt4cl5ujcEBahogOpbgXERWxa7rsM.jpeg" 
                     alt="The K9 Unit battlebot" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-4 space-y-3">
                   <h3 className="font-bold text-white text-lg">The K9 Unit</h3>
-                  <p className="text-gray-400 text-sm line-clamp-3">2800 RPM spinner with 7.6Nm torque. Weapon tip speed: 120km/h. 3mm aluminium armour.</p>
+                  <p className="text-gray-400 text-sm line-clamp-2">2800 RPM vertical spinner. 120km/h tip speed. 3mm aluminium armour.</p>
+                  <p className="text-gray-500 text-xs">Joshua, Shane, Ben, Kitty, Jake, Ashling</p>
                   <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
                     Preview
                   </Button>
