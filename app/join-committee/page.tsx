@@ -1,13 +1,20 @@
+"use client"
+
 import { BackgroundParticles } from "@/components/background-particles"
 import { Users } from "lucide-react"
 import Script from "next/script"
-
-export const metadata = {
-  title: "Join the Committee | Patch RoboWars",
-  description: "Join the Patch RoboWars committee and help organize Ireland's most exciting battlebot competition.",
-}
+import { useEffect } from "react"
 
 export default function JoinCommitteePage() {
+  useEffect(() => {
+    // Load Tally embeds when the script is ready
+    const loadTally = () => {
+      if (typeof window !== "undefined" && (window as unknown as { Tally?: { loadEmbeds: () => void } }).Tally) {
+        (window as unknown as { Tally: { loadEmbeds: () => void } }).Tally.loadEmbeds()
+      }
+    }
+    loadTally()
+  }, [])
   return (
     <div className="flex flex-col min-h-screen bg-black">
       <BackgroundParticles />
@@ -52,11 +59,6 @@ export default function JoinCommitteePage() {
       <Script
         src="https://tally.so/widgets/embed.js"
         strategy="lazyOnload"
-        onLoad={() => {
-          if (typeof window !== "undefined" && (window as unknown as { Tally?: { loadEmbeds: () => void } }).Tally) {
-            (window as unknown as { Tally: { loadEmbeds: () => void } }).Tally.loadEmbeds()
-          }
-        }}
       />
     </div>
   )
