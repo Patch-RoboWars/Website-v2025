@@ -94,34 +94,71 @@ export default function Home() {
             </div>
 
             {/* Last Year's Event Info */}
-            <div className="max-w-4xl mx-auto bg-black/40 rounded-2xl border border-orange-900/30 p-8 space-y-6">
-              <h3 className="text-xl font-bold text-orange-400 text-center">Last Year&apos;s Event</h3>
-              <p className="text-gray-300 text-center leading-relaxed">
-                RoboWars 2024 was our inaugural event held at Dogpatch Labs, featuring 5 teams battling it out in a custom-built polycarbonate arena. 
-                Over 200 attendees watched as spinners clashed, flippers launched, and chainsaws revved. The K9 Unit took home the championship 
-                with their devastating vertical spinner, but every team put on an incredible show of engineering and combat strategy.
-              </p>
+            <div className="max-w-5xl mx-auto bg-gradient-to-br from-black/60 to-orange-950/20 rounded-2xl border border-orange-900/30 p-8 space-y-8">
+              <div className="text-center space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">RoboWars 2024</h3>
+                <div className="flex items-center justify-center gap-6 text-sm text-gray-400">
+                  <span className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    Dogpatch Labs
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    5 Teams
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    200+ Attendees
+                  </span>
+                </div>
+              </div>
               
-              {/* Photo/Video Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700/50 overflow-hidden">
+              {/* Photo/Video Grid - 2x2 on desktop */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="aspect-square rounded-xl overflow-hidden border border-orange-900/20">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250705_173051-y9mOK708cxhgbMysGDYEwHYjX4uvrA.jpg" 
-                    alt="RoboWars 2024 arena with battlebots and crowd" 
-                    className="w-full h-full object-cover"
+                    alt="RoboWars 2024 arena battle" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700/50 overflow-hidden">
-                  <video 
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0136-Qifhi6LUOhBJ2sRgDrPBHU7Ate3Igq.MP4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
+                <div className="aspect-square rounded-xl overflow-hidden border border-orange-900/20">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250705_173300-MAHeKITorUaosfLNK7mvMRqZWrAkOO.jpg" 
+                    alt="Arena with pit hazard and Duck-heed Martin" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
+                <div className="aspect-square rounded-xl overflow-hidden border border-orange-900/20">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Snapchat-1284622242-sBe6IF2miTiMUNwxT72KaObGQPwUPG.jpg" 
+                    alt="Crowd watching the arena" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="aspect-square rounded-xl overflow-hidden border border-orange-900/20">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250705_152627-N3sphnV4nclCOz5L8Mp4w0nWmiz5DF.jpg" 
+                    alt="Live broadcast screen at Dogpatch Labs" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* Video highlight */}
+              <div className="aspect-video rounded-xl overflow-hidden border border-orange-900/20">
+                <video 
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0136-Qifhi6LUOhBJ2sRgDrPBHU7Ate3Igq.MP4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
