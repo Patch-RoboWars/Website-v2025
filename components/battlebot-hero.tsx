@@ -115,7 +115,22 @@ export function BattlebotHero() {
         <circle cx="200" cy="200" r="4" fill="#444" stroke="#555" strokeWidth="1" />
         <circle cx="270" cy="200" r="4" fill="#444" stroke="#555" strokeWidth="1" />
         
-        {/* === VERTICAL DRUM SPINNER === */}
+        {/* === SPINNER MOTOR HOUSING (inside chassis) === */}
+        <rect x="175" y="205" width="50" height="45" rx="4" fill="#0f0f0f" stroke="#222" strokeWidth="2" />
+        <rect x="180" y="210" width="40" height="35" rx="2" fill="#1a1a1a" />
+        {/* Motor vents */}
+        <line x1="185" y1="218" x2="215" y2="218" stroke="#333" strokeWidth="2" />
+        <line x1="185" y1="226" x2="215" y2="226" stroke="#333" strokeWidth="2" />
+        <line x1="185" y1="234" x2="215" y2="234" stroke="#333" strokeWidth="2" />
+        
+        {/* Bearing mount on top of chassis */}
+        <ellipse cx="200" cy="195" rx="22" ry="8" fill="#2a2a2a" stroke="#444" strokeWidth="2" />
+        <ellipse cx="200" cy="195" rx="14" ry="5" fill="#1a1a1a" stroke="#333" strokeWidth="1" />
+        
+        {/* Shaft coming out of bearing */}
+        <rect x="196" y="160" width="8" height="38" fill="#555" stroke="#666" strokeWidth="1" />
+        
+        {/* === VERTICAL DRUM SPINNER - mounted on shaft === */}
         <motion.g
           animate={{ rotate: 360 }}
           transition={{
@@ -123,21 +138,21 @@ export function BattlebotHero() {
             repeat: Infinity,
             ease: "linear"
           }}
-          style={{ transformOrigin: "200px 150px" }}
+          style={{ transformOrigin: "200px 140px" }}
         >
-          {/* Drum body */}
-          <ellipse cx="200" cy="150" rx="30" ry="45" fill="url(#drumGradient)" stroke="#b45309" strokeWidth="3" />
+          {/* Drum body - horizontal cylinder */}
+          <ellipse cx="200" cy="140" rx="45" ry="22" fill="url(#drumGradient)" stroke="#b45309" strokeWidth="3" />
           
           {/* Drum teeth/impactors - 4 around the drum */}
-          <rect x="167" y="108" width="8" height="14" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
-          <rect x="225" y="108" width="8" height="14" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
-          <rect x="167" y="178" width="8" height="14" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
-          <rect x="225" y="178" width="8" height="14" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
+          <rect x="150" y="133" width="12" height="14" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
+          <rect x="238" y="133" width="12" height="14" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
+          <rect x="193" y="112" width="14" height="10" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
+          <rect x="193" y="158" width="14" height="10" rx="2" fill="#dc2626" stroke="#991b1b" strokeWidth="1" />
+          
+          {/* Center hub cap */}
+          <circle cx="200" cy="140" r="10" fill="#333" stroke="#444" strokeWidth="2" />
+          <circle cx="200" cy="140" r="5" fill="#222" />
         </motion.g>
-        
-        {/* Spinner mount bracket */}
-        <rect x="185" y="185" width="30" height="18" rx="3" fill="#333" stroke="#444" strokeWidth="2" />
-        <circle cx="200" cy="194" r="5" fill="#222" stroke="#444" strokeWidth="1" />
         
         {/* === ELECTRONICS === */}
         
