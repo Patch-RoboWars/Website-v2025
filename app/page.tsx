@@ -4,8 +4,10 @@ import { PastCompetitionSection } from "@/components/past-competition-section"
 import { FightRulesSection } from "@/components/fight-rules-section"
 import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
 import { BuildDaySlideshow } from "@/components/build-day-slideshow"
-import { Info, MapPin, Calendar, Clock, Ticket, ArrowDown } from "lucide-react"
+import { BattlebotHero } from "@/components/battlebot-hero"
+import { Info, MapPin, Calendar, Clock, Ticket, ArrowDown, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -14,45 +16,76 @@ export default function Home() {
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white py-20">
         <BackgroundParticles />
 
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto w-full space-y-12">
-          {/* Main Event Title */}
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500">
-                PATCH ROBOWARS
-              </span>
-            </h1>
-            <div className="space-y-2">
-              <p className="text-orange-400 font-semibold text-xl md:text-2xl tracking-wide">PRESENTS</p>
-              {/* <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">FIGHT NIGHT 2025</h2> */}
-            </div>
-
-            {/* Get Tickets Button */}
-            <div className="pt-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-4 text-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <a
-                  href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3"
-                >
-                  <Ticket className="h-6 w-6" />
-                  Get Free Tickets Now
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* Build Context Slideshow */}
-          <div className="w-full">
-            <div className="bg-black/60 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-6 md:p-8 space-y-6">
-              <div className="w-full max-w-5xl mx-auto">
-                <BuildDaySlideshow />
+        <div className="relative z-10 px-4 max-w-6xl mx-auto w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Text content */}
+            <div className="text-center lg:text-left space-y-8">
+              <div className="space-y-4">
+                <p className="text-orange-400 font-semibold text-lg md:text-xl tracking-widest uppercase">
+                  Dublin&apos;s Premier Battlebot Competition
+                </p>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500">
+                    PATCH
+                  </span>
+                  <br />
+                  <span className="text-white">ROBOWARS</span>
+                </h1>
+                <p className="text-gray-300 text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
+                  Build. Battle. Dominate. Join the most exciting student-run robot combat competition in Ireland.
+                </p>
               </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-8 py-6 text-lg border-0 shadow-lg hover:shadow-orange-500/25 hover:shadow-xl transition-all duration-300"
+                >
+                  <Link href="/join-committee" className="flex items-center justify-center gap-3">
+                    <Users className="h-5 w-5" />
+                    Join the Committee
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 hover:text-orange-300 font-semibold px-8 py-6 text-lg transition-all duration-300"
+                >
+                  <a
+                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3"
+                  >
+                    <Ticket className="h-5 w-5" />
+                    Get Free Tickets
+                  </a>
+                </Button>
+              </div>
+
+              {/* Stats */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-8 pt-4">
+                <div className="text-center">
+                  <p className="text-3xl md:text-4xl font-bold text-orange-500">20+</p>
+                  <p className="text-gray-400 text-sm">Teams</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl md:text-4xl font-bold text-orange-500">1</p>
+                  <p className="text-gray-400 text-sm">Epic Battle</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl md:text-4xl font-bold text-orange-500">Free</p>
+                  <p className="text-gray-400 text-sm">Entry</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Battlebot */}
+            <div className="relative">
+              <BattlebotHero />
             </div>
           </div>
         </div>
