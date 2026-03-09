@@ -95,8 +95,12 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto">
               {/* Team 1: The K9 Unit */}
               <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
-                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">1</div>
+                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/images/teams/k9-unit.jpg" 
+                    alt="The K9 Unit battlebot" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-4 space-y-3">
                   <h3 className="font-bold text-white text-lg">The K9 Unit</h3>
