@@ -46,7 +46,8 @@ export function ParticipantBenefits() {
         </div>
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Night Outs</h3>
-          <p className="text-gray-300">Fun night outs with free food on Launch day and FIght Night</p>
+          {/* <p className="text-gray-300">Fun night outs with free food on Launch day and FIght Night</p> */}
+          <p className="text-gray-300">Fun night outs with free food on Launch day and event days</p>
         </div>
       </div>
     </div>

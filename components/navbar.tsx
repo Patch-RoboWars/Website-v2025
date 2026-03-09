@@ -29,11 +29,14 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
-            <Link href="/#event-details" className="text-gray-300 hover:text-white transition-colors">
+{/* <Link href="/#event-details" className="text-gray-300 hover:text-white transition-colors">
               Fight Night
-            </Link>
+            </Link> */}
             <Link href="/#fight-rules" className="text-gray-300 hover:text-white transition-colors">
               Fight Rules
+            </Link>
+            <Link href="/join-committee" className="text-gray-300 hover:text-white transition-colors">
+              Join Committee
             </Link>
             <Button
               asChild
@@ -64,19 +67,26 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors py-2" onClick={toggleMenu}>
               About
             </Link>
-            <Link
+            {/* <Link
               href="/#event-details"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
               Fight Night
-            </Link>
+            </Link> */}
             <Link
               href="/#fight-rules"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
               Fight Rules
+            </Link>
+            <Link
+              href="/join-committee"
+              className="text-gray-300 hover:text-white transition-colors py-2"
+              onClick={toggleMenu}
+            >
+              Join Committee
             </Link>
             <Button
               asChild

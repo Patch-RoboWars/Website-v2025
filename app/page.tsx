@@ -24,7 +24,7 @@ export default function Home() {
             </h1>
             <div className="space-y-2">
               <p className="text-orange-400 font-semibold text-xl md:text-2xl tracking-wide">PRESENTS</p>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">FIGHT NIGHT 2025</h2>
+              {/* <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">FIGHT NIGHT 2025</h2> */}
             </div>
 
             {/* Get Tickets Button */}
@@ -122,7 +122,8 @@ export default function Home() {
               <div className="inline-block p-2 bg-orange-900/20 rounded-lg">
                 <Calendar className="h-6 w-6 text-orange-500" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Fight Night Details</h2>
+              {/* <h2 className="text-3xl md:text-4xl font-bold text-white">Fight Night Details</h2> */}
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Event Details</h2>
               <div className="w-20 h-1 bg-orange-600"></div>
             </div>
 
