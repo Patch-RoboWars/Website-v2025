@@ -93,11 +93,11 @@ export default function Home() {
               <p className="text-gray-300 max-w-2xl">Meet the teams competing in this year&apos;s competition</p>
             </div>
 
-            {/* Event Overview from 2024 */}
+            {/* Event Overview */}
             <div className="max-w-5xl mx-auto bg-black/40 rounded-2xl border border-orange-900/30 p-8 space-y-6">
-              <h3 className="text-2xl font-bold text-white text-center">RoboWars 2024</h3>
+              <h3 className="text-2xl font-bold text-white text-center">RoboWars 2025</h3>
               <p className="text-gray-300 text-center max-w-2xl mx-auto">
-                Our inaugural event was an incredible success with fierce battles, amazing builds, and an electric atmosphere.
+                Get ready for another year of fierce battles, amazing builds, and an electric atmosphere.
               </p>
               
               {/* Photo Grid */}
@@ -105,13 +105,20 @@ export default function Home() {
                 <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700/50 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250705_173051-nY3xGBeyE9LYkn8PX0sCh44YNtlzFH.jpg" 
-                    alt="RoboWars 2024 arena with battlebots and crowd" 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250705_173051-mXYGypJVVsixuHeadOpHqGlu5HCV6d.jpg" 
+                    alt="RoboWars arena with battlebots and crowd" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
-                  <span className="text-gray-500 text-sm">Crowd Photo</span>
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700/50 overflow-hidden">
+                  <video 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0136-x46EB110bMihdVfdrhTvrZwbihNcwt.MP4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center border border-gray-700/50 overflow-hidden">
                   <span className="text-gray-500 text-sm">Battle Photo</span>
