@@ -11,198 +11,282 @@ export function BattlebotHero() {
       className="relative w-full max-w-lg mx-auto aspect-square cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ perspective: "1000px" }}
+      style={{ perspective: "800px" }}
     >
       {/* Glow effect behind the bot */}
       <div className="absolute inset-0 bg-gradient-radial from-orange-500/20 via-orange-600/5 to-transparent rounded-full blur-3xl" />
       
       {/* Arena floor reflection */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-gradient-to-t from-orange-500/10 to-transparent blur-xl rounded-full" />
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-gradient-to-t from-orange-500/10 to-transparent blur-xl rounded-full" />
       
-      {/* Main battlebot SVG - Horizontal bar spinner */}
-      <svg
-        viewBox="0 0 400 320"
-        className="w-full h-full relative z-10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Shadow under the bot */}
-        <ellipse cx="200" cy="280" rx="130" ry="18" fill="rgba(0,0,0,0.5)" />
-        
-        {/* === MAIN CHASSIS - Low profile wedge === */}
-        
-        {/* Base plate - angled wedge shape */}
-        <path
-          d="M60 250 L340 250 L330 270 L70 270 Z"
-          fill="#2a2a2a"
-          stroke="#3a3a3a"
-          strokeWidth="2"
-        />
-        
-        {/* Main body - low rectangular chassis */}
-        <path
-          d="M80 220 L320 220 L340 250 L60 250 Z"
-          fill="url(#chassisGradient)"
-          stroke="#555"
-          strokeWidth="2"
-        />
-        
-        {/* Top plate with vents */}
-        <rect x="90" y="210" width="220" height="15" rx="2" fill="url(#metalGradient)" stroke="#666" strokeWidth="1" />
-        
-        {/* Vent slots */}
-        <rect x="110" y="213" width="30" height="8" rx="1" fill="#222" />
-        <rect x="150" y="213" width="30" height="8" rx="1" fill="#222" />
-        <rect x="220" y="213" width="30" height="8" rx="1" fill="#222" />
-        <rect x="260" y="213" width="30" height="8" rx="1" fill="#222" />
-        
-        {/* Side armor panels */}
-        <path d="M80 220 L60 250 L60 260 L75 260 L85 225 Z" fill="#333" stroke="#444" strokeWidth="1" />
-        <path d="M320 220 L340 250 L340 260 L325 260 L315 225 Z" fill="#333" stroke="#444" strokeWidth="1" />
-        
-        {/* Front wedge scoop - angled armor */}
-        <path
-          d="M60 250 L30 265 L60 270 Z"
-          fill="#3a3a3a"
-          stroke="#4a4a4a"
-          strokeWidth="2"
-        />
-        <path
-          d="M340 250 L370 265 L340 270 Z"
-          fill="#3a3a3a"
-          stroke="#4a4a4a"
-          strokeWidth="2"
-        />
-        
-        {/* === WHEELS - Small side-mounted wheels === */}
-        
-        {/* Left front wheel */}
-        <ellipse cx="85" cy="258" rx="12" ry="8" fill="#111" stroke="#222" strokeWidth="2" />
-        <ellipse cx="85" cy="258" rx="6" ry="4" fill="#f97316" />
-        
-        {/* Left rear wheel */}
-        <ellipse cx="115" cy="262" rx="12" ry="8" fill="#111" stroke="#222" strokeWidth="2" />
-        <ellipse cx="115" cy="262" rx="6" ry="4" fill="#f97316" />
-        
-        {/* Right front wheel */}
-        <ellipse cx="315" cy="258" rx="12" ry="8" fill="#111" stroke="#222" strokeWidth="2" />
-        <ellipse cx="315" cy="258" rx="6" ry="4" fill="#f97316" />
-        
-        {/* Right rear wheel */}
-        <ellipse cx="285" cy="262" rx="12" ry="8" fill="#111" stroke="#222" strokeWidth="2" />
-        <ellipse cx="285" cy="262" rx="6" ry="4" fill="#f97316" />
-        
-        {/* === SPINNER MOTOR MOUNT - Center of chassis === */}
-        
-        {/* Motor housing */}
-        <rect x="175" y="215" width="50" height="30" rx="3" fill="#1a1a1a" stroke="#333" strokeWidth="2" />
-        
-        {/* Bearing mount */}
-        <ellipse cx="200" cy="210" rx="20" ry="6" fill="#2a2a2a" stroke="#444" strokeWidth="2" />
-        <ellipse cx="200" cy="210" rx="12" ry="4" fill="#1a1a1a" />
-        
-        {/* Shaft */}
-        <rect x="196" y="185" width="8" height="28" fill="#555" stroke="#666" strokeWidth="1" />
-        
-        {/* === ELECTRONICS === */}
-        
-        {/* Power LED */}
-        <circle cx="140" cy="235" r="3" fill="#22c55e" className="animate-pulse" />
-        
-        {/* Receiver antenna */}
-        <line x1="260" y1="220" x2="280" y2="180" stroke="#555" strokeWidth="2" />
-        <circle cx="280" cy="177" r="3" fill="#f97316" className="animate-pulse" />
-        
-        {/* Link LED */}
-        <circle cx="260" cy="235" r="2" fill="#3b82f6" className="animate-pulse" />
-        
-        {/* Gradients */}
-        <defs>
-          <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#5a5a5a" />
-            <stop offset="25%" stopColor="#8a8a8a" />
-            <stop offset="50%" stopColor="#aaa" />
-            <stop offset="75%" stopColor="#8a8a8a" />
-            <stop offset="100%" stopColor="#5a5a5a" />
-          </linearGradient>
-          <linearGradient id="chassisGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#4a4a4a" />
-            <stop offset="50%" stopColor="#3a3a3a" />
-            <stop offset="100%" stopColor="#2a2a2a" />
-          </linearGradient>
-          <linearGradient id="barGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#6b7280" />
-            <stop offset="20%" stopColor="#9ca3af" />
-            <stop offset="50%" stopColor="#d1d5db" />
-            <stop offset="80%" stopColor="#9ca3af" />
-            <stop offset="100%" stopColor="#6b7280" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      {/* 3D Spinning Bar - Positioned above the chassis using CSS 3D transforms */}
+      {/* 3D Bot Container */}
       <div 
-        className="absolute left-1/2 -translate-x-1/2 w-full"
+        className="absolute inset-0 flex items-center justify-center"
         style={{ 
-          top: "45%",
           transformStyle: "preserve-3d",
-          transform: "translateX(-50%) rotateX(70deg)",
+          transform: "rotateX(25deg) rotateY(-10deg)",
         }}
       >
-        <motion.div
-          animate={{ rotateZ: 360 }}
-          transition={{
-            duration: isHovered ? 0.1 : 3,
-            repeat: Infinity,
-            ease: "linear"
+        {/* Shadow */}
+        <div 
+          className="absolute w-48 h-32 bg-black/40 rounded-full blur-lg"
+          style={{ transform: "translateY(80px) translateZ(-50px) rotateX(90deg)" }}
+        />
+        
+        {/* === SIMPLE BOX CHASSIS === */}
+        <div 
+          className="relative"
+          style={{ 
+            width: "200px",
+            height: "50px",
+            transformStyle: "preserve-3d",
+            transform: "translateY(20px)"
           }}
-          className="relative w-[85%] mx-auto"
-          style={{ transformStyle: "preserve-3d" }}
         >
-          {/* Main spinning bar */}
+          {/* Top face */}
           <div 
-            className="h-4 rounded-sm mx-auto"
-            style={{
-              background: "linear-gradient(90deg, #6b7280, #9ca3af, #d1d5db, #9ca3af, #6b7280)",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2)",
-              border: "1px solid #666",
-            }}
-          />
-          
-          {/* Impact teeth on ends */}
-          <div 
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-0 h-0"
-            style={{
-              borderTop: "8px solid transparent",
-              borderBottom: "8px solid transparent",
-              borderRight: "12px solid #7f8c8d",
-            }}
-          />
-          <div 
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-0 h-0"
-            style={{
-              borderTop: "8px solid transparent",
-              borderBottom: "8px solid transparent",
-              borderLeft: "12px solid #7f8c8d",
-            }}
-          />
-          
-          {/* Center hub */}
-          <div 
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full"
-            style={{
-              background: "radial-gradient(circle, #444 0%, #222 100%)",
+            className="absolute w-full h-full"
+            style={{ 
+              background: "linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 50%, #2a2a2a 100%)",
               border: "2px solid #555",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
+              transform: "translateZ(25px)",
+            }}
+          >
+            {/* Vents */}
+            <div className="flex gap-3 justify-center mt-3">
+              <div className="w-8 h-2 bg-black/60 rounded-sm" />
+              <div className="w-8 h-2 bg-black/60 rounded-sm" />
+              <div className="w-8 h-2 bg-black/60 rounded-sm" />
+            </div>
+            {/* LEDs */}
+            <div className="absolute top-2 left-3 w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <div className="absolute top-2 right-3 w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+          </div>
+          
+          {/* Bottom face */}
+          <div 
+            className="absolute w-full h-full bg-neutral-900"
+            style={{ transform: "translateZ(-25px)" }}
+          />
+          
+          {/* Front face */}
+          <div 
+            className="absolute bg-neutral-700"
+            style={{ 
+              width: "200px",
+              height: "50px",
+              transform: "rotateX(90deg) translateZ(-25px)",
+              background: "linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%)",
+              borderTop: "2px solid #555",
             }}
           />
-        </motion.div>
+          
+          {/* Back face */}
+          <div 
+            className="absolute bg-neutral-800"
+            style={{ 
+              width: "200px",
+              height: "50px",
+              transform: "rotateX(-90deg) translateZ(-25px)",
+              background: "linear-gradient(0deg, #3a3a3a 0%, #2a2a2a 100%)",
+            }}
+          />
+          
+          {/* Left face */}
+          <div 
+            className="absolute"
+            style={{ 
+              width: "50px",
+              height: "50px",
+              left: "-25px",
+              transform: "rotateY(-90deg)",
+              background: "linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%)",
+              borderLeft: "2px solid #444",
+            }}
+          />
+          
+          {/* Right face */}
+          <div 
+            className="absolute"
+            style={{ 
+              width: "50px",
+              height: "50px",
+              right: "-25px",
+              transform: "rotateY(90deg)",
+              background: "linear-gradient(-90deg, #2a2a2a 0%, #3a3a3a 100%)",
+              borderRight: "2px solid #444",
+            }}
+          />
+          
+          {/* === 4 WHEELS === */}
+          
+          {/* Front Left Wheel */}
+          <div 
+            className="absolute"
+            style={{ 
+              width: "20px",
+              height: "30px",
+              left: "-15px",
+              top: "-5px",
+              transformStyle: "preserve-3d",
+              transform: "rotateY(90deg) translateZ(-10px)",
+            }}
+          >
+            <div 
+              className="w-full h-full rounded-md bg-neutral-900 border-2 border-neutral-700"
+              style={{ boxShadow: "inset 0 0 8px rgba(0,0,0,0.8)" }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-orange-500" />
+              </div>
+            </div>
+          </div>
+          
+          {/* Front Right Wheel */}
+          <div 
+            className="absolute"
+            style={{ 
+              width: "20px",
+              height: "30px",
+              right: "-15px",
+              top: "-5px",
+              transformStyle: "preserve-3d",
+              transform: "rotateY(90deg) translateZ(10px)",
+            }}
+          >
+            <div 
+              className="w-full h-full rounded-md bg-neutral-900 border-2 border-neutral-700"
+              style={{ boxShadow: "inset 0 0 8px rgba(0,0,0,0.8)" }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-orange-500" />
+              </div>
+            </div>
+          </div>
+          
+          {/* Back Left Wheel */}
+          <div 
+            className="absolute"
+            style={{ 
+              width: "20px",
+              height: "30px",
+              left: "25px",
+              top: "-5px",
+              transformStyle: "preserve-3d",
+              transform: "rotateY(90deg) translateZ(-35px)",
+            }}
+          >
+            <div 
+              className="w-full h-full rounded-md bg-neutral-900 border-2 border-neutral-700"
+              style={{ boxShadow: "inset 0 0 8px rgba(0,0,0,0.8)" }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-orange-500" />
+              </div>
+            </div>
+          </div>
+          
+          {/* Back Right Wheel */}
+          <div 
+            className="absolute"
+            style={{ 
+              width: "20px",
+              height: "30px",
+              right: "25px",
+              top: "-5px",
+              transformStyle: "preserve-3d",
+              transform: "rotateY(90deg) translateZ(35px)",
+            }}
+          >
+            <div 
+              className="w-full h-full rounded-md bg-neutral-900 border-2 border-neutral-700"
+              style={{ boxShadow: "inset 0 0 8px rgba(0,0,0,0.8)" }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-orange-500" />
+              </div>
+            </div>
+          </div>
+          
+          {/* === SPINNING BAR WEAPON === */}
+          <motion.div
+            className="absolute left-1/2 -translate-x-1/2"
+            style={{ 
+              top: "-30px",
+              transformStyle: "preserve-3d",
+            }}
+            animate={{ rotateY: 360 }}
+            transition={{
+              duration: isHovered ? 0.15 : 2,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            {/* Spinner bar */}
+            <div 
+              className="relative"
+              style={{ 
+                width: "180px",
+                height: "16px",
+                background: "linear-gradient(90deg, #6b7280 0%, #9ca3af 20%, #d1d5db 50%, #9ca3af 80%, #6b7280 100%)",
+                borderRadius: "2px",
+                boxShadow: "0 4px 8px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.3)",
+                border: "1px solid #555",
+                transformStyle: "preserve-3d",
+              }}
+            >
+              {/* Bar thickness (3D depth) */}
+              <div 
+                className="absolute w-full"
+                style={{
+                  height: "8px",
+                  background: "linear-gradient(90deg, #555 0%, #666 50%, #555 100%)",
+                  transform: "rotateX(90deg) translateZ(8px)",
+                  top: "0",
+                }}
+              />
+              
+              {/* Impact teeth */}
+              <div 
+                className="absolute -left-3 top-1/2 -translate-y-1/2"
+                style={{
+                  width: "0",
+                  height: "0",
+                  borderTop: "10px solid transparent",
+                  borderBottom: "10px solid transparent",
+                  borderRight: "15px solid #7f8c8d",
+                }}
+              />
+              <div 
+                className="absolute -right-3 top-1/2 -translate-y-1/2"
+                style={{
+                  width: "0",
+                  height: "0",
+                  borderTop: "10px solid transparent",
+                  borderBottom: "10px solid transparent",
+                  borderLeft: "15px solid #7f8c8d",
+                }}
+              />
+              
+              {/* Center hub */}
+              <div 
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full"
+                style={{
+                  background: "radial-gradient(circle, #444 0%, #222 100%)",
+                  border: "2px solid #555",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
+                }}
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
       
-      {/* Spark effects - only show when hovered (spinning fast) */}
+      {/* Spark effects when spinning fast */}
       {isHovered && (
         <>
           <motion.div
-            className="absolute top-[45%] left-[10%] w-2 h-2 bg-yellow-300 rounded-full"
+            className="absolute top-[35%] left-[15%] w-2 h-2 bg-yellow-300 rounded-full"
             animate={{
               opacity: [0, 1, 1, 0],
               scale: [0, 1, 1.5, 0],
@@ -216,7 +300,7 @@ export function BattlebotHero() {
             }}
           />
           <motion.div
-            className="absolute top-[45%] right-[10%] w-2 h-2 bg-orange-300 rounded-full"
+            className="absolute top-[35%] right-[15%] w-2 h-2 bg-orange-300 rounded-full"
             animate={{
               opacity: [0, 1, 1, 0],
               scale: [0, 1, 1.5, 0],
@@ -227,19 +311,6 @@ export function BattlebotHero() {
               duration: 0.2,
               repeat: Infinity,
               repeatDelay: 0.2,
-            }}
-          />
-          <motion.div
-            className="absolute top-[40%] left-[50%] w-1.5 h-1.5 bg-yellow-400 rounded-full"
-            animate={{
-              opacity: [0, 1, 0],
-              scale: [0, 2, 0],
-              y: [0, -50],
-            }}
-            transition={{
-              duration: 0.15,
-              repeat: Infinity,
-              repeatDelay: 0.3,
             }}
           />
         </>
