@@ -11,6 +11,7 @@ export function BattlebotHero() {
       className="relative w-full max-w-lg mx-auto aspect-square cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      style={{ perspective: "1000px" }}
     >
       {/* Glow effect behind the bot */}
       <div className="absolute inset-0 bg-gradient-radial from-orange-500/20 via-orange-600/5 to-transparent rounded-full blur-3xl" />
@@ -18,7 +19,7 @@ export function BattlebotHero() {
       {/* Arena floor reflection */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-gradient-to-t from-orange-500/10 to-transparent blur-xl rounded-full" />
       
-      {/* Main battlebot SVG - Horizontal bar spinner like Da Vinci's Fury */}
+      {/* Main battlebot SVG - Horizontal bar spinner */}
       <svg
         viewBox="0 0 400 320"
         className="w-full h-full relative z-10"
@@ -100,39 +101,7 @@ export function BattlebotHero() {
         <ellipse cx="200" cy="210" rx="12" ry="4" fill="#1a1a1a" />
         
         {/* Shaft */}
-        <rect x="196" y="195" width="8" height="18" fill="#555" stroke="#666" strokeWidth="1" />
-        
-        {/* === HORIZONTAL BAR SPINNER === */}
-        <motion.g
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: isHovered ? 0.08 : 3,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          style={{ transformOrigin: "200px 190px" }}
-        >
-          {/* Main spinning bar */}
-          <rect x="50" y="182" width="300" height="16" rx="2" fill="url(#barGradient)" stroke="#666" strokeWidth="2" />
-          
-          {/* Bar reinforcement plates */}
-          <rect x="60" y="185" width="40" height="10" rx="1" fill="#4a4a4a" stroke="#555" strokeWidth="1" />
-          <rect x="300" y="185" width="40" height="10" rx="1" fill="#4a4a4a" stroke="#555" strokeWidth="1" />
-          
-          {/* Impact teeth on ends */}
-          <polygon points="50,185 35,190 50,195" fill="#7f8c8d" stroke="#666" strokeWidth="1" />
-          <polygon points="350,185 365,190 350,195" fill="#7f8c8d" stroke="#666" strokeWidth="1" />
-          
-          {/* Center hub */}
-          <circle cx="200" cy="190" r="15" fill="#333" stroke="#444" strokeWidth="2" />
-          <circle cx="200" cy="190" r="8" fill="#222" stroke="#333" strokeWidth="1" />
-          
-          {/* Mounting bolts on bar */}
-          <circle cx="100" cy="190" r="3" fill="#555" />
-          <circle cx="150" cy="190" r="3" fill="#555" />
-          <circle cx="250" cy="190" r="3" fill="#555" />
-          <circle cx="300" cy="190" r="3" fill="#555" />
-        </motion.g>
+        <rect x="196" y="185" width="8" height="28" fill="#555" stroke="#666" strokeWidth="1" />
         
         {/* === ELECTRONICS === */}
         
@@ -169,6 +138,65 @@ export function BattlebotHero() {
           </linearGradient>
         </defs>
       </svg>
+
+      {/* 3D Spinning Bar - Positioned above the chassis using CSS 3D transforms */}
+      <div 
+        className="absolute left-1/2 -translate-x-1/2 w-full"
+        style={{ 
+          top: "45%",
+          transformStyle: "preserve-3d",
+          transform: "translateX(-50%) rotateX(70deg)",
+        }}
+      >
+        <motion.div
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: isHovered ? 0.1 : 3,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="relative w-[85%] mx-auto"
+          style={{ transformStyle: "preserve-3d" }}
+        >
+          {/* Main spinning bar */}
+          <div 
+            className="h-4 rounded-sm mx-auto"
+            style={{
+              background: "linear-gradient(90deg, #6b7280, #9ca3af, #d1d5db, #9ca3af, #6b7280)",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2)",
+              border: "1px solid #666",
+            }}
+          />
+          
+          {/* Impact teeth on ends */}
+          <div 
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-0 h-0"
+            style={{
+              borderTop: "8px solid transparent",
+              borderBottom: "8px solid transparent",
+              borderRight: "12px solid #7f8c8d",
+            }}
+          />
+          <div 
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-0 h-0"
+            style={{
+              borderTop: "8px solid transparent",
+              borderBottom: "8px solid transparent",
+              borderLeft: "12px solid #7f8c8d",
+            }}
+          />
+          
+          {/* Center hub */}
+          <div 
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full"
+            style={{
+              background: "radial-gradient(circle, #444 0%, #222 100%)",
+              border: "2px solid #555",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
+            }}
+          />
+        </motion.div>
+      </div>
       
       {/* Spark effects - only show when hovered (spinning fast) */}
       {isHovered && (

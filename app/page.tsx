@@ -92,11 +92,11 @@ export default function Home() {
               <p className="text-gray-300 max-w-2xl">Meet the teams competing in this year&apos;s competition</p>
             </div>
 
-            {/* Event Overview from Last Year */}
+            {/* Event Overview from 2024 */}
             <div className="max-w-5xl mx-auto bg-black/40 rounded-2xl border border-orange-900/30 p-8 space-y-6">
-              <h3 className="text-2xl font-bold text-white text-center">Last Year&apos;s Event</h3>
+              <h3 className="text-2xl font-bold text-white text-center">RoboWars 2024</h3>
               <p className="text-gray-300 text-center max-w-2xl mx-auto">
-                RoboWars 2024 was an incredible success with fierce battles, amazing builds, and an electric atmosphere.
+                Our inaugural event was an incredible success with fierce battles, amazing builds, and an electric atmosphere.
               </p>
               
               {/* Photo Grid Placeholder */}
@@ -142,8 +142,9 @@ export default function Home() {
               {/* Team 1: The K9 Unit */}
               <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
                 <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9136.JPG-HAt4cl5ujcEBahogOpbgXERWxa7rsM.jpeg" 
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9918-mjVX7GK0tuTDmtEw7DErcwXAljIk8j.jpg" 
                     alt="The K9 Unit battlebot" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
