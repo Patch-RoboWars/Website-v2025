@@ -2,6 +2,7 @@ import { BackgroundParticles } from "@/components/background-particles"
 import { SponsorSection } from "@/components/sponsor-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
 import { BattlebotHero } from "@/components/battlebot-hero"
+import { TeamsSection } from "@/components/teams-section"
 import { Info, ArrowDown, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -138,83 +139,7 @@ export default function Home() {
 
             <h3 className="text-2xl font-bold text-white text-center pt-8">This Year&apos;s Competitors</h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto">
-              {/* Team 1: The K9 Unit */}
-              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
-                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img 
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC9918-mjVX7GK0tuTDmtEw7DErcwXAljIk8j.jpg" 
-                    alt="The K9 Unit battlebot" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4 space-y-3">
-                  <h3 className="font-bold text-white text-lg">The K9 Unit</h3>
-                  <p className="text-gray-400 text-sm line-clamp-2">2800 RPM vertical spinner. 120km/h tip speed. 3mm aluminium armour.</p>
-                  <p className="text-gray-500 text-xs">Joshua, Shane, Ben, Kitty, Jake, Ashling</p>
-                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
-                    Preview
-                  </Button>
-                </div>
-              </div>
-
-              {/* Team 2: (for) Flip's Sake */}
-              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
-                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">2</div>
-                </div>
-                <div className="p-4 space-y-3">
-                  <h3 className="font-bold text-white text-lg">(for) Flip&apos;s Sake</h3>
-                  <p className="text-gray-400 text-sm line-clamp-3">Pneumatic flipper weapon running at 120 PSI.</p>
-                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
-                    Preview
-                  </Button>
-                </div>
-              </div>
-
-              {/* Team 3: Duck-heed Martin */}
-              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
-                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">3</div>
-                </div>
-                <div className="p-4 space-y-3">
-                  <h3 className="font-bold text-white text-lg">Duck-heed Martin</h3>
-                  <p className="text-gray-400 text-sm line-clamp-3">10,000 RPM 116mm blade. 3mm steel frame with carbon fiber shell. Rubber duck armour.</p>
-                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
-                    Preview
-                  </Button>
-                </div>
-              </div>
-
-              {/* Team 4: Sawshank Redemption't */}
-              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
-                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">4</div>
-                </div>
-                <div className="p-4 space-y-3">
-                  <h3 className="font-bold text-white text-lg">Sawshank Redemption&apos;t</h3>
-                  <p className="text-gray-400 text-sm line-clamp-3">48V chainsaw weapon with mecanum wheels for omnidirectional movement.</p>
-                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
-                    Preview
-                  </Button>
-                </div>
-              </div>
-
-              {/* Team 5: Krusty Crew */}
-              <div className="group bg-black/60 rounded-xl border border-orange-900/30 overflow-hidden hover:border-orange-500/50 transition-all duration-300">
-                <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                  <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">5</div>
-                </div>
-                <div className="p-4 space-y-3">
-                  <h3 className="font-bold text-white text-lg">Krusty Crew</h3>
-                  <p className="text-gray-400 text-sm line-clamp-3">2200KV drone motor weapon. Welded frame with 3mm aluminium composite armour.</p>
-                  <Button variant="outline" size="sm" className="w-full border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
-                    Preview
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <TeamsSection />
           </div>
         </div>
       </section>
