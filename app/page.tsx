@@ -93,14 +93,8 @@ export default function Home() {
               <p className="text-gray-300 max-w-2xl">Meet the teams competing in this year&apos;s competition</p>
             </div>
 
-            {/* Event Overview */}
-            <div className="max-w-5xl mx-auto bg-black/40 rounded-2xl border border-orange-900/30 p-8 space-y-6">
-              <h3 className="text-2xl font-bold text-white text-center">RoboWars 2025</h3>
-              <p className="text-gray-300 text-center max-w-2xl mx-auto">
-                Get ready for another year of fierce battles, amazing builds, and an electric atmosphere.
-              </p>
-              
-              {/* Photo Grid */}
+            {/* Photo Grid */}
+            <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700/50 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -127,25 +121,9 @@ export default function Home() {
                   <span className="text-gray-500 text-sm">Winners Photo</span>
                 </div>
               </div>
-
-              {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-4 pt-4">
-                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
-                  <p className="text-3xl font-bold text-orange-500">5</p>
-                  <p className="text-gray-400 text-sm">Teams</p>
-                </div>
-                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
-                  <p className="text-3xl font-bold text-orange-500">200+</p>
-                  <p className="text-gray-400 text-sm">Attendees</p>
-                </div>
-                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
-                  <p className="text-3xl font-bold text-orange-500">1</p>
-                  <p className="text-gray-400 text-sm">Epic Night</p>
-                </div>
-              </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-white text-center pt-8">This Year&apos;s Competitors</h3>
+            <h3 className="text-2xl font-bold text-white text-center pt-8">2025 Competitors</h3>
 
             <TeamsSection />
           </div>
