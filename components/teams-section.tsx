@@ -69,8 +69,14 @@ const teams: Team[] = [
       { name: "Ugochukwu Uzoukwu" },
       { name: "Alan Jose" },
     ],
-    mainImage: "",
-    photos: [],
+    mainImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0157-ai6F7YKazg8VQBZRIJdtC9TNrItwyj.jpg",
+    photos: [
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0157-ai6F7YKazg8VQBZRIJdtC9TNrItwyj.jpg", caption: "Team photo with the flipper bot" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0083-QgwzpkJHUlaABTkB7XA44j2KcnLzCd.jpg", caption: "Flipper bot in the arena" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/_DSC0081-VCAb5SoaqifgwcJkJNOCy9rgiZ9EZ2.jpg", caption: "Bot ready for battle" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9237.JPG-YAn4Xzs9AgJDAFLkQ5fOvY9AjtQErI.jpeg", caption: "Final assembly on the turf" },
+      { url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8824.JPG-CMCVhFgOSEdPV410MmQDfu3TbVB0Iq.jpeg", caption: "Build session with the team" },
+    ],
   },
   {
     id: 3,
