@@ -21,7 +21,7 @@ export function HeroSection() {
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500">
-                PATCH ROBOWARS
+                test
               </span>
             </h1>
 
