@@ -117,17 +117,13 @@ export default function Home() {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+              <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
                   <p className="text-3xl font-bold text-orange-500">5</p>
                   <p className="text-gray-400 text-sm">Teams</p>
                 </div>
                 <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
-                  <p className="text-3xl font-bold text-orange-500">10+</p>
-                  <p className="text-gray-400 text-sm">Battles</p>
-                </div>
-                <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
-                  <p className="text-3xl font-bold text-orange-500">100+</p>
+                  <p className="text-3xl font-bold text-orange-500">200+</p>
                   <p className="text-gray-400 text-sm">Attendees</p>
                 </div>
                 <div className="text-center p-4 bg-black/30 rounded-lg border border-orange-900/20">
