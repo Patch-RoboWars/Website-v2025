@@ -38,19 +38,6 @@ export function Navbar() {
             <Link href="/join-committee" className="text-gray-300 hover:text-white transition-colors">
               Join Committee
             </Link>
-            <Button
-              asChild
-              variant="default"
-              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[140px]"
-            >
-              <a
-                href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Tickets
-              </a>
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -88,20 +75,6 @@ export function Navbar() {
             >
               Join Committee
             </Link>
-            <Button
-              asChild
-              variant="default"
-              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white w-full"
-            >
-              <a
-                href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={toggleMenu}
-              >
-                Get Tickets
-              </a>
-            </Button>
           </div>
         </div>
       )}

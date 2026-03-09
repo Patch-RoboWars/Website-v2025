@@ -5,7 +5,7 @@ import { FightRulesSection } from "@/components/fight-rules-section"
 import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
 import { BuildDaySlideshow } from "@/components/build-day-slideshow"
 import { BattlebotHero } from "@/components/battlebot-hero"
-import { Info, MapPin, Calendar, Clock, Ticket, ArrowDown, Users } from "lucide-react"
+import { Info, MapPin, Calendar, Clock, ArrowDown, Users, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -36,7 +36,7 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* CTA Buttons */}
+              {/* CTA Button */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
                   asChild
@@ -47,22 +47,6 @@ export default function Home() {
                     <Users className="h-5 w-5" />
                     Join the Committee
                   </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 hover:text-orange-300 font-semibold px-8 py-6 text-lg transition-all duration-300"
-                >
-                  <a
-                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3"
-                  >
-                    <Ticket className="h-5 w-5" />
-                    Get Free Tickets
-                  </a>
                 </Button>
               </div>
 
@@ -133,7 +117,7 @@ export default function Home() {
 
               <div className="bg-black/40 rounded-xl p-6 flex items-start space-x-4 border border-orange-900/20">
                 <div className="bg-orange-900/30 rounded-full p-3 flex-shrink-0">
-                  <Ticket className="h-6 w-6 text-orange-500" />
+                  <Wrench className="h-6 w-6 text-orange-500" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-lg font-semibold text-white">Everything Provided</h3>
@@ -210,27 +194,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Call to Action */}
-              <div className="text-center mt-12 space-y-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-4 text-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <a
-                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3"
-                  >
-                    <Ticket className="h-6 w-6" />
-                    Reserve Your Spot
-                  </a>
-                </Button>
-                <p className="text-gray-400 text-sm">
-                  Limited seating available • Free admission • Registration required
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>
