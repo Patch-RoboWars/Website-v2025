@@ -1,7 +1,6 @@
 import { BackgroundParticles } from "@/components/background-particles"
 import { SponsorSection } from "@/components/sponsor-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
-import { BattlebotHero } from "@/components/battlebot-hero"
 import { TeamsSection } from "@/components/teams-section"
 import { Info, ArrowDown, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -14,39 +13,29 @@ export default function Home() {
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white py-20">
         <BackgroundParticles />
 
-        <div className="relative z-10 px-4 max-w-6xl mx-auto w-full">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left side - Text content */}
-            <div className="text-center lg:text-left space-y-8">
-              <div className="space-y-6">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500">
-                    PATCH
-                  </span>
-                  <br />
-                  <span className="text-white">ROBOWARS</span>
-                </h1>
-              </div>
+        <div className="relative z-10 px-4 max-w-4xl mx-auto w-full text-center space-y-8">
+          <div className="space-y-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500">
+                PATCH
+              </span>
+              <br />
+              <span className="text-white">ROBOWARS</span>
+            </h1>
+          </div>
 
-              {/* CTA Button */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-8 py-6 text-lg border-0 shadow-lg hover:shadow-orange-500/25 hover:shadow-xl transition-all duration-300"
-                >
-                  <Link href="/join-committee" className="flex items-center justify-center gap-3">
-                    <Users className="h-5 w-5" />
-                    Join the Committee
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* Right side - Battlebot */}
-            <div className="relative">
-              <BattlebotHero />
-            </div>
+          {/* CTA Button */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-8 py-6 text-lg border-0 shadow-lg hover:shadow-orange-500/25 hover:shadow-xl transition-all duration-300"
+            >
+              <Link href="/join-committee" className="flex items-center justify-center gap-3">
+                <Users className="h-5 w-5" />
+                Join the Committee
+              </Link>
+            </Button>
           </div>
         </div>
 
