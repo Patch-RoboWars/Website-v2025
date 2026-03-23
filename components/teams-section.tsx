@@ -193,7 +193,7 @@ export function TeamsSection() {
                 <img
                   src={team.mainImage}
                   alt={`${team.name} battlebot`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
               ) : (
                 <div className="text-6xl font-black text-orange-500/20 group-hover:text-orange-500/40 transition-colors">

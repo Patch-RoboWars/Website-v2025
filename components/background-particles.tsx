@@ -16,27 +16,35 @@ interface Particle {
 
 export function BackgroundParticles() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const animationRef = useRef<number>(0)
 
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
 
-    const ctx = canvas.getContext("2d")
+    const ctx = canvas.getContext("2d", { alpha: true })
     if (!ctx) return
 
-    // Set canvas to full screen
+    // Disable image smoothing for performance
+    ctx.imageSmoothingEnabled = false
+
+    // Set canvas to full screen with device pixel ratio consideration
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      canvas.width = window.innerWidth * dpr
+      canvas.height = window.innerHeight * dpr
+      canvas.style.width = `${window.innerWidth}px`
+      canvas.style.height = `${window.innerHeight}px`
+      ctx.scale(dpr, dpr)
     }
 
     resizeCanvas()
     window.addEventListener("resize", resizeCanvas)
 
-    // Particle settings
+    // Reduced particle count for better performance
     const particles: Particle[] = []
-    const maxParticles = 100
-    const colors = ["#ff7300", "#ff9d00", "#ffb700", "#ffd000"]
+    const maxParticles = 30
+    const colors = ["#ff7300", "#ff9d00", "#ffb700"]
 
     // Create initial particles
     for (let i = 0; i < maxParticles; i++) {
@@ -45,70 +53,74 @@ export function BackgroundParticles() {
 
     function createParticle() {
       const particle: Particle = {
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * 3 + 1,
-        speedX: (Math.random() - 0.5) * 1,
-        speedY: (Math.random() - 0.5) * 1,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: Math.random() * 2 + 1,
+        speedX: (Math.random() - 0.5) * 0.5,
+        speedY: (Math.random() - 0.5) * 0.5,
         color: colors[Math.floor(Math.random() * colors.length)],
-        opacity: Math.random() * 0.5 + 0.2,
+        opacity: Math.random() * 0.4 + 0.1,
         life: 0,
-        maxLife: Math.random() * 100 + 50,
+        maxLife: Math.random() * 200 + 100,
       }
       particles.push(particle)
     }
 
     function updateParticles() {
-      for (let i = 0; i < particles.length; i++) {
+      const width = window.innerWidth
+      const height = window.innerHeight
+      
+      for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i]
 
-        // Update position
         p.x += p.speedX
         p.y += p.speedY
-
-        // Update life
         p.life++
+        p.opacity = (1 - p.life / p.maxLife) * 0.4
 
-        // Fade out as life increases
-        p.opacity = 1 - p.life / p.maxLife
-
-        // Remove dead particles and create new ones
-        if (p.life >= p.maxLife || p.x < 0 || p.x > canvas.width || p.y < 0 || p.y > canvas.height) {
+        if (p.life >= p.maxLife || p.x < 0 || p.x > width || p.y < 0 || p.y > height) {
           particles.splice(i, 1)
-          i--
           createParticle()
         }
       }
     }
 
     function drawParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+      
+      // No shadow blur - major performance improvement
+      ctx.shadowBlur = 0
+      
       for (const p of particles) {
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fillStyle = p.color
         ctx.globalAlpha = p.opacity
-        ctx.fill()
-
-        // Add glow effect
-        ctx.shadowBlur = 10
-        ctx.shadowColor = p.color
+        ctx.fillStyle = p.color
+        ctx.fillRect(p.x - p.size / 2, p.y - p.size / 2, p.size, p.size)
       }
+      
+      ctx.globalAlpha = 1
     }
 
-    // Animation loop
-    const animate = () => {
+    // Throttled animation loop - 30fps instead of 60fps
+    let lastTime = 0
+    const fps = 30
+    const frameInterval = 1000 / fps
+
+    const animate = (currentTime: number) => {
+      animationRef.current = requestAnimationFrame(animate)
+      
+      const deltaTime = currentTime - lastTime
+      if (deltaTime < frameInterval) return
+      
+      lastTime = currentTime - (deltaTime % frameInterval)
       updateParticles()
       drawParticles()
-      requestAnimationFrame(animate)
     }
 
-    animate()
+    animationRef.current = requestAnimationFrame(animate)
 
-    // Cleanup
     return () => {
       window.removeEventListener("resize", resizeCanvas)
+      cancelAnimationFrame(animationRef.current)
     }
   }, [])
 

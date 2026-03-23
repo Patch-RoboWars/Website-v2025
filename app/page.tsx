@@ -109,7 +109,7 @@ export default function Home() {
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250705_173051-y9mOK708cxhgbMysGDYEwHYjX4uvrA.jpg" 
                     alt="RoboWars 2024 arena battle" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-xl overflow-hidden border border-orange-900/20">
@@ -117,7 +117,7 @@ export default function Home() {
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250705_173300-MAHeKITorUaosfLNK7mvMRqZWrAkOO.jpg" 
                     alt="Arena with pit hazard and Duck-heed Martin" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-xl overflow-hidden border border-orange-900/20">
@@ -125,7 +125,7 @@ export default function Home() {
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Snapchat-1284622242-sBe6IF2miTiMUNwxT72KaObGQPwUPG.jpg" 
                     alt="Crowd watching the arena" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-xl overflow-hidden border border-orange-900/20">
@@ -133,7 +133,7 @@ export default function Home() {
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250705_152627-N3sphnV4nclCOz5L8Mp4w0nWmiz5DF.jpg" 
                     alt="Live broadcast screen at Dogpatch Labs" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -146,6 +146,7 @@ export default function Home() {
                   loop
                   muted
                   playsInline
+                  preload="none"
                   className="w-full h-full object-cover"
                 />
               </div>
