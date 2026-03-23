@@ -30,7 +30,7 @@ export default function JoinCommitteePage() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <iframe
-                data-tally-src="https://tally.so/embed/obAMO1?hideTitle=1&dynamicHeight=1"
+                data-tally-src="https://tally.so/embed/A78dGo?hideTitle=1&dynamicHeight=1"
                 loading="lazy"
                 width="100%"
                 height="0"
